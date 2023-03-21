@@ -1,4 +1,5 @@
 <div class="heroSection relative">
+
   <div
     class="h-[35rem] bg-hero-pattern bg-no-repeat bg-cover bg-left -scale-x-100 relative flex justify-end"
   >
@@ -99,14 +100,9 @@
     <div class="bg-pink-50 h-full px-32 py-12">
       <div class="flex flex-col justify-center items-center">
         <h1 class="text-4xl text-gray-600 mt-16">Career Opportunities</h1>
-        <span class="w-14 border-2 border-orange-600 mt-2 mb-4"></span>
+        <span class="w-14 border-2 border-orange-600 mt-2 mb-6"></span>
            <ul class="flex gap-8">
-            <li class="hover:border-b-2 hover:border-green-600 hover:text-green-600 cursor-pointer px-6">All</li>
-            <li class="hover:border-b-2 hover:border-green-600 hover:text-green-600 cursor-pointer px-6">Africa</li>
-            <li class="hover:border-b-2 hover:border-green-600 hover:text-green-600 cursor-pointer px-6">America</li>
-            <li class="hover:border-b-2 hover:border-green-600 hover:text-green-600 cursor-pointer px-6">India</li>
-            <li class="hover:border-b-2 hover:border-green-600 hover:text-green-600 cursor-pointer px-6">London</li>
-            <li class="hover:border-b-2 hover:border-green-600 hover:text-green-600 cursor-pointer px-6">UAE</li>
+            <li class="hover:border-b-2 hover:border-green-600 hover:text-green-600 cursor-pointer px-6" *ngFor="let item of contries">{{item}}</li>
            </ul>
       </div>
 
@@ -120,34 +116,14 @@
         </div>
         <h1 class="w-full text-2xl px-10 mt-3 mb-3">Education (Full-Time)</h1>
         <div class="flex justify-between px-10 py-4">
-          <div>
-             <ul>
-              <li>Lorem ipsum dolor sit.</li>
-              <li>Lorem ipsum dolor sit.</li>
-              <li>Lorem ipsum dolor sit.</li>
-              <li>Lorem ipsum dolor sit.</li>
-              <li>Lorem ipsum dolor sit.</li>
-              <li>Lorem ipsum dolor sit.</li>
-              <li>Lorem ipsum dolor sit.</li>
-              <li>Lorem ipsum dolor sit.</li>
-              <li>Lorem ipsum dolor sit.</li>
-              <li>Lorem ipsum dolor sit.</li>
-              <li>Lorem ipsum dolor sit.</li>
+          <div class="flex flex-col gap-3">
+             <ul *ngFor="let item of education">
+              <li>{{item}}</li>
              </ul>
           </div>
-          <div>
-            <ul>
-              <li>Lorem ipsum </li>
-              <li>Lorem ipsum </li>
-              <li>Lorem ipsum </li>
-              <li>Lorem ipsum </li>
-              <li>Lorem ipsum </li>
-              <li>Lorem ipsum </li>
-              <li>Lorem ipsum </li>
-              <li>Lorem ipsum </li>
-              <li>Lorem ipsum </li>
-              <li>Lorem ipsum </li>
-              <li>Lorem ipsum </li>
+          <div class="flex flex-col gap-3">
+            <ul *ngFor="let item of Econtries">
+              <li>{{item}}</li>
              </ul>
           </div>
         </div>
@@ -155,6 +131,8 @@
       </div>
     </div>
   </div>
+
+
 
 
   <div class="flex flex-col gap-2 fixed bottom-10 right-5">
@@ -165,7 +143,7 @@
 
     </button>
 
-    <button class="w-10 h-10 bg-white border border-red-200 rounded flex justify-center items-center">
+    <button class="w-10 h-10 bg-white border border-red-200 rounded flex justify-center items-center" routerLink="/content">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
         <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
       </svg>
@@ -174,3 +152,4 @@
 
 
 </div>
+
