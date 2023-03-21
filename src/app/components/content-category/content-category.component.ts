@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormBuilder, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-content-category',
@@ -6,5 +7,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./content-category.component.scss']
 })
 export class ContentCategoryComponent {
+  postForm=this.fb.group({
+    firstname:['',Validators.required],
+    email:['',Validators.required],
+    location:['',Validators.required],
+    linkedin:['',Validators.required],
+    lastname:['',Validators.required],
+    phone:['',Validators.required],
+    resume:['',Validators.required],
+    website:['',Validators.required],
+  })
+
+  get fc(){
+    return this.postForm.controls
+  }
+
+
+  constructor(private fb:FormBuilder){}
+
+
 
 }
