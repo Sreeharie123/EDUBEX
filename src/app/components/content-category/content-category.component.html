@@ -18,103 +18,31 @@
 </div>
 
 
-<div class="px-10 text-gray-700">
+<div *ngIf="careerData$ |async as careerData" class="px-10 text-gray-700">
   <img src="https://www.edubex.com/assets/images/logo_main.svg" class="py-5" />
   <div class="pb-10">
-    <h1 class="text-4xl text-gray-600">Specilist, Content and Communication</h1>
-    <p class="text-gray-700">Edubex,Thiruvananthapuram,Kerala,India</p>
+    <h1 class="text-4xl text-gray-600">{{ careerData.title }}</h1>
+    <p class="text-gray-700">{{ careerData.location }}</p>
   </div>
 
-  <div class="flex">
-    <div class="h-fit flex-[2] p-10">
-      <h2 class="text-2xl font-medium text-gray-700 mb-2">
-        Specilist, Content and communication
-      </h2>
-      <p class="mb-2">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi
-        provident corporis nisi alias autem, Lorem ipsum dolor sit, amet
-        consectetur adipisicing elit. Voluptas odio maxime eveniet eos accusamus
-        assumenda rerum pariatur libero, quisquam voluptates fuga aliquam ullam
-        et exercitationem dolores eligendi aliquid. Quia, ullam?
-      </p>
-
-      <h2 class="text-2xl font-medium text-gray-700 mb-2">Responsibilities</h2>
-
-      <ul
-        class="list-square px-6 py-2"
-        *ngFor="let item of [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]"
-      >
-        <li>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
-          quidem quia voluptatem at officiis labore, exercitationem ipsam enim
-          molestiae dolorum, reprehenderit eaque culpa consectetur neque illo
-          suscipit cumque incidunt optio.
-        </li>
-      </ul>
-
-      <h2 class="mb-4 mt-4">The successfull candidate will have</h2>
-
-      <ul
-        class="list-square px-6 py-1"
-        *ngFor="let item of [1, 2, 3, 4, 5, 6, 7, 8, 9]"
-      >
-        <li>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat
-          quidem quia voluptatem at officiis labore.
-        </li>
-      </ul>
-
-      <h2 class="mb-4 mt-4">Benefits and Perks</h2>
-
-      <ul class="list-square px-6 py-1" *ngFor="let item of [1, 2, 3, 4, 5, 6]">
-        <li>Lorem ipsum dolor sit amet consectetur adipisicing elit.</li>
-      </ul>
-
-      <h2 class="mb-4 mt-4">About Edubex</h2>
-      <p class="mb-4 mt-4">
-        Edubex is the fastest growing online education platform specialized in
-        delivering Shorts term courses, Webinars, Online events and University
-        pathway programs for student and working professionals across the
-        wrold.Our programs stand out with its meticulously designed course
-        structure, content and easy to follow presentions.
-      </p>
-      <p class="mb-4 mt-4">
-        Bonus: Have you been to a compus or jooined and online learning
-        opportunity ? We are actively seeking individulas that believe in
-        lifelong learning and that have taken part inour on Campus or Online
-        offerings.
-      </p>
-      <p class="mb-4 mt-4">
-        NOTE: Only those applicants under consideration willbe contacted. Please
-        accept our utmost appreciation for your interst.
-      </p>
-      <p class="mt-4">
-        Edubex is committed to maintaing a diverse work environment and is proud
-        to be an equal oportunity employer. All Qualifed applicants, regardless
-        of racee, color, religon, gender gender identity or expressionn, sexual
-        orientation, national origin, genetics,disability, age, or veteran
-        status will receive consideration for employment. If you have any
-        accessibility requirements or concerns regarding the hiring process or
-        employment with us, please notify us so we can provide suitable
-        accommodation.
-      </p>
-    </div>
-    <div class="w-full flex-[1] border-l px-10">
+  <div class="flex justify-between">
+    <div [innerHTML]="careerData.description" class="flex-[2]" ></div>
+  <div class="w-full flex-[1] border-l px-10">
 
 
-      <button class="w-fit h-fit px-12 py-2 bg-green-700 text-white rounded ml-[26rem] mt-10">Apply</button>
-      <p>Seniority Level</p>
-      <p>Associate</p>
-      <p class="mt-4">Industry</p>
-      <p>information Technology & Service Computer <br> Software Financial Services</p>
-      <p class="mt-4">Employment Type</p>
-      <p>Full-time</p>
-      <p class="mt-4 text-xl">Job Functions</p>
-      <p>Quality Assurance</p>
-
-    </div>
+    <button class="w-fit h-fit px-12 py-2 bg-green-700 text-white rounded ml-[26rem] mt-10">Apply</button>
+    <p>Seniority Level</p>
+    <p>Associate</p>
+    <p class="mt-4">Industry</p>
+    <p>information Technology & Service Computer <br> Software Financial Services</p>
+    <p class="mt-4">Employment Type</p>
+    <p>Full-time</p>
+    <p class="mt-4 text-xl">Job Functions</p>
+    <p>Quality Assurance</p>
 
   </div>
+  </div>
+
   <div class="flex py-10">
 
  <img src="./../../../assets/International trade-rafiki.png" class="h-[50rem]">

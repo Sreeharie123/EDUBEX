@@ -5,14 +5,16 @@ import { ContentCategoryComponent } from './components/content-category/content-
 import { MainComponentComponent } from './components/main-component/main-component.component';
 
 const routes: Routes = [
-  {path:"",redirectTo:"home",pathMatch:"full"},
-  {path:"home",component:MainComponentComponent},
-  {path:"content",component:ContentCategoryComponent},
+  {path:"",redirectTo:"career",pathMatch:"full"},
+  {path:"career",component:MainComponentComponent},
+  {path:"career/:id",component:ContentCategoryComponent},
 
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    scrollPositionRestoration: 'top'
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

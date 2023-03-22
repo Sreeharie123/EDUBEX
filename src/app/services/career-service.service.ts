@@ -47,4 +47,13 @@ export class CareerServiceService {
 
   }
 
+
+  //career details Page
+
+  getCareerDetails(id: number){
+    return this.http.post<CareerResponse>(`${this.apiRoot}/career/detail`, {id}).pipe(
+      map((res) => res.data)
+    );
+  }
+
 }
