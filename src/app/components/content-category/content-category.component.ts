@@ -36,8 +36,6 @@ export class ContentCategoryComponent implements OnInit {
   ngOnInit(): void {
 
     this.banner$ = this.careerService.getBanner('career');
-       this.banner$.subscribe(console.log)
-
   }
 
 

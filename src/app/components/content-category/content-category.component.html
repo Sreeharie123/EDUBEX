@@ -1,8 +1,9 @@
+
 <div
-  class="h-[35rem] bg-hero-pattern1 bg-no-repeat bg-cover bg-right relative" *ngIf="banner$|async as banner"
+  class="h-[35rem] bg-hero-pattern bg-no-repeat bg-cover relative bg-left -scale-x-100  flex justify-end " *ngIf="banner$|async as banner"
 >
   <div
-    class="w-1/2 h-full bg-gradient-to-r from-green-800 to-transparent"
+    class="w-1/2 h-full bg-gradient-to-r from-green-800 to-transparent -scale-x-100"
   >
     <div
       class="text-white font-sans absolute top-40 left-36 flex flex-col gap-3"
@@ -15,8 +16,6 @@
     </div>
   </div>
 </div>
-
-
 
 
 <div class="px-10 text-gray-700">
@@ -259,8 +258,9 @@
   </button>
 
   <button class="w-10 h-10 bg-white border border-red-200 rounded flex justify-center items-center shadow-md" routerLink="/home">
-    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 animate-bounce">
       <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
     </svg>
   </button>
 </div>
+
