@@ -1,23 +1,23 @@
 <div
-  class="h-[35rem] bg-hero-pattern1 bg-no-repeat bg-cover bg-right -scale-x-100 relative flex justify-end"
+  class="h-[35rem] bg-hero-pattern1 bg-no-repeat bg-cover bg-right relative" *ngIf="banner$|async as banner"
 >
   <div
-    class="w-1/2 h-full bg-gradient-to-r from-green-800 to-transparent -scale-x-100"
+    class="w-1/2 h-full bg-gradient-to-r from-green-800 to-transparent"
   >
     <div
       class="text-white font-sans absolute top-40 left-36 flex flex-col gap-3"
     >
-      <p class="font-bold text-4xl">Job Details</p>
+      <p class="font-bold text-4xl" [innerHTML]="banner.title"></p>
       <p class="w-[46rem]">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Unde numquam
-        provident magni, fugiat dignissimos sapiente molestiae impedit ipsum
-        eius recusandae ullam nobis labore esse autem laboriosam nesciunt
-        aliquid corporis odit!
+        {{banner.meta_description}}
       </p>
       <p class="text-2xl text-orange-700 mt-5">LoadMore --------></p>
     </div>
   </div>
 </div>
+
+
+
 
 <div class="px-10 text-gray-700">
   <img src="https://www.edubex.com/assets/images/logo_main.svg" class="py-5" />

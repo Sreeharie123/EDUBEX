@@ -40,4 +40,11 @@ export class CareerServiceService {
     );
   }
 
+  getSecond(){
+    return this.http.get<CareerResponse>(`${this.apiRoot}/career/list`).pipe(
+      map((res) => res.careers)
+    );
+
+  }
+
 }
