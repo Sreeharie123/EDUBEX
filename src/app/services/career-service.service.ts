@@ -46,8 +46,6 @@ export class CareerServiceService {
     );
 
   }
-
-
   //career details Page
 
   getCareerDetails(id: number){

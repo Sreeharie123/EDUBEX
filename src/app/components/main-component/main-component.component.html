@@ -1,30 +1,28 @@
 <div
   *ngIf="banner$ | async as banner"
-  class="relative h-[35rem]"
+  class="relative md:h-[35rem] h-72 max-md:bg-hero-pattern bg-no-repeat bg-cover"
 >
 
-<img [src]="banner.image" class="absolute inset-0 h-full w-full object-cover">
-<!-- <img class="absolute inset-0 h-full w-full object-cover" src="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"> -->
+<img [src]="banner.image" class="absolute inset-0 h-full w-full object-cover max-md:hidden">
+<!-- <img class="md:hidden absolute inset-0 h-full w-full object-cover" src="https://images.unsplash.com/photo-1515378960530-7c0da6231fb1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80"> -->
   <div
-    class="hidden relative w-1/2 h-full bg-gradient-to-r from-green-800 to-transparent"
+    class="md:hidden relative md:w-1/2 h-full bg-gradient-to-r from-green-800 to-transparent"
   >
     <div
-      class="text-white font-sans absolute top-36 left-36 flex flex-col gap-3"
+      class="text-white font-sans absolute md:top-36 top-10 left-2 md:left-36 flex flex-col gap-3"
     >
       <!-- <p class="font-bold text-4xl">Career</p> -->
         <div class="font-bold text-4xl" [innerHTML]="banner.title" ></div>
-      <p class="w-[46rem]"> {{ banner.meta_description }}</p>
+      <p class="md:w-[46rem]"> {{ banner.meta_description }}</p>
     </div>
   </div>
 </div>
 
 
-
-
-<div class="flex px-24 py-16 relative">
-  <div class="flex-1">
+<div class="flex md:px-24 md:py-16 relative max-md:flex max-md:flex-col-reverse">
+  <div class="md:flex-1">
     <div
-      class="h-96 w-[55rem] bg-white shadow-lg border absolute top-24 left-80 flex flex-col gap-3 p-10 z-20"
+      class="md:h-96 md:w-[55rem] bg-white shadow-lg border md:absolute md:top-24 md:left-80 md:flex md:flex-col md:gap-3 md:p-10 md:z-20 px-2"
     >
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat
@@ -47,19 +45,18 @@
 
   <img
     src="https://images.unsplash.com/photo-1507207908229-c59ddb730e40?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDF8fGNvbGxlZ2UlMjBzdHVkZW50fGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60"
-    class="h-[28rem] border"
+    class="md:h-[28rem] border"
   />
 </div>
 
 
 
-
-<div class="w-fit h-fit bg-white flex items-center gap-16 px-28" *ngIf="work$ |async as work">
+<div class="w-fit h-fit bg-white flex flex-col md:flex-row items-center md:gap-16 md:px-28 " *ngIf="work$ |async as work">
   <img [src]="work.image">
-  <div>
-    <h2 class="text-3xl text-gray-700">{{work.title}}</h2>
-    <p class="w-12 border-2 border-orange-600 mb-5"></p>
-    <ul class="flex flex-col gap-3 text-gray-700">
+  <div class="max-md:px-2">
+    <h2 class="text-3xl text-gray-700 max-md:mt-1 ">{{work.title}}</h2>
+    <p class="w-12 border-2 border-orange-600 md:mb-5"></p>
+    <ul class="flex flex-col md:gap-3 text-gray-700">
       <li [innerHTML]="work.description"></li>
     </ul>
   </div>
@@ -67,12 +64,12 @@
 
 
 
-<div class="px-28 py-10 relative" *ngIf="perk$|async as perk">
-  <div class="text-white h-[30rem] px-10 py-24 bg-cover" style="background-image: url({{perk.image}});">
-    <h1 class="text-5xl">{{perk.title}}</h1>
+<div class="md:px-28 md:py-10 relative py-1" *ngIf="perk$|async as perk">
+  <div class="text-white md:h-[30rem] max-h-full max-md:p-4 md:px-10 md:py-24 bg-cover" style="background-image: url({{perk.image}});">
+    <h1 class="md:text-5xl text-xl">{{perk.title}}</h1>
     <p class="w-14 border-2 border-orange-600 mt-2 mb-6"></p>
-    <p class="w-[60rem] text-3xl mt-10" [innerHTML]="perk.description"></p>
-    <div class="bg-white w-96 px-8 py-4 rounded-lg shadow absolute -bottom-2 right-36 z-30">
+    <p class="md:w-[60rem] md:text-3xl mt-10" [innerHTML]="perk.description"></p>
+    <div class="bg-white w-96 md:px-8 py-4 rounded-lg shadow absolute -bottom-2 right-36 z-30 max-md:hidden">
       <p class="text-green-800">
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed explicabo
         nihil sunt temporibus natus, ea eligendi dolorum voluptates aliquam
@@ -83,7 +80,7 @@
   </div>
 
 
-<div class="flex flex-col gap-2 fixed bottom-10 right-5">
+<div class="flex flex-col gap-2 fixed bottom-1 md:bottom-10 md:right-5 right-1">
   <button class="w-10 h-10 bg-white border border-red-200 rounded flex justify-center items-center">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 text-green-700">
       <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 002.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 01-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 00-1.091-.852H4.5A2.25 2.25 0 002.25 4.5v2.25z" />
@@ -91,19 +88,19 @@
 
   </button>
 
-  <button class="w-10 h-10 bg-white border border-red-200 rounded flex justify-center items-center" routerLink="/content">
+  <button class="w-10 h-10 bg-white border border-red-200 rounded flex justify-center items-center" routerLink="/career">
     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 animate-bounce">
       <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 15.75l7.5-7.5 7.5 7.5" />
     </svg>
   </button>
 </div>
 
-<div class="px-28 py-10">
-  <div class="flex flex-col gap-4 bg-gray-50 px-28 py-20 rounded-md">
+<div class="md:px-28 md:py-10">
+  <div class="flex flex-col gap-4 bg-gray-50 md:px-28 md:py-20 rounded-md">
     <div class="flex flex-col justify-center items-center">
       <h1 class="text-4xl text-gray-600">Career Opportunities</h1>
       <span class="w-14 border-2 border-orange-600 mt-2 mb-6"></span>
-      <ul class="flex gap-14">
+      <ul class="flex w-full overflow-auto px-2 py-2 md:px-0 md:py-0 gap-14">
         <li
           class="hover:text-green-600 text-xl cursor-pointer py-2 relative before:content-[''] before:w-0 before:h-1 before:bg-[#2FBF71] before:absolute before:-bottom-2 hover:before:w-full before:transition-all"
           *ngFor="let item of countries"
@@ -114,23 +111,20 @@
     </div>
 
     <div
-      class="w-full px-24 py-10 bg-white border flex flex-col gap-2 shadow rounded-md"
+      class="w-full md:px-24 md:py-10 bg-white border flex flex-col gap-2 shadow rounded-md px-4"
     >
 
 
       <ng-container *ngFor="let career of careers$ | async; index as i">
 
-        <a [routerLink]="[career.id]" *ngIf="i === 0" class="w-full flex flex-col gap-2 py-4">
-          <p class="text-3xl text-gray-700">{{ career.category_name }}</p>
+        <a [routerLink]="[career.id]" *ngIf="i === 0" class="w-full flex flex-col gap-2 md:py-4 py-2">
+          <p class="md:text-3xl text-gray-700">{{ career.category_name }}</p>
             <div class="flex justify-between">
               <p class="text-gray-700">{{ career.title }}</p>
-              <p>{{ career.location }}</p>
+              <p class="whitespace-nowrap">{{ career.location }}</p>
             </div>
 
             <hr>
-
-            <!-- <h1 class="w-full text-2xl mt-3 mb-3">Education (Full-Time)</h1> -->
-
           </a>
         <a
         [routerLink]="[career.id]"

@@ -1,4 +1,4 @@
-<div class="h-16 flex items-center justify-between px-10">
+<div class="h-16 flex items-center justify-between md:px-10 px-4 max-md:border-b">
   <div class="w-fit h-16 flex items-center">
     <img
       src="https://custpostimages.s3.ap-south-1.amazonaws.com/12471/1661161365159.jpg"
@@ -7,7 +7,11 @@
     <p class="text-2xl font-bold text-green-700">EDUBEX</p>
   </div>
 
-  <div class="flex gap-2">
+  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8 md:hidden">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+  </svg>
+
+  <div class="flex gap-2 max-md:hidden">
     <select
       name="Programs"
       class="bg-transparent px-4 hover:border-b-4 hover:border-orange-600"
